@@ -1,14 +1,14 @@
 //
-//  JasonDemoAction.m
+//  JasonetteDemoAction.m
 //  Jasonette
 //
 //  Copyright © 2016 seletz. All rights reserved.
 //
 
 #include <asl.h>
-#import "JasonDemoAction.h"
+#import "JasonetteDemoAction.h"
 
-@implementation JasonDemoAction
+@implementation JasonetteDemoAction
 
 @synthesize VC;
 @synthesize options;
