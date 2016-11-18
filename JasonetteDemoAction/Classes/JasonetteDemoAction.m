@@ -17,7 +17,7 @@
     if(self = [super init]) {
         [[NSNotificationCenter defaultCenter]
             addObserver:self
-               selector:@selector(demo)
+               selector:@selector(demo:)
                    name:@"JasonetteDemoAction.demo"
                  object:nil];
     }
