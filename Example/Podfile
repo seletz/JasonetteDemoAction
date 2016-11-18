@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JasonetteDemoAction_Example' do
+  pod 'JasonetteDemoAction', :path => '../'
+
+  target 'JasonetteDemoAction_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
