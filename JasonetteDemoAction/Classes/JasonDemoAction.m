@@ -13,9 +13,24 @@
 @synthesize VC;
 @synthesize options;
 
-- (void)demo {
-    if(self.options){
-        NSString *message = self.options[@"text"];
+-(id)init {
+    if(self = [super init]) {
+        [[NSNotificationCenter defaultCenter]
+            addObserver:self
+               selector:@selector(demo)
+                   name:@"JasonetteDemoAction.demo"
+                 object:nil];
+    }
+    
+    return self;
+}
+
+- (void)demo:(NSNotification *)notification {
+    NSDictionary *args = notification.userInfo;
+    NSDictionary *options = args[@"options"];
+    
+    if (options[@"text"]) {
+        NSString *message = options[@"text"];
         asl_log(NULL, NULL, ASL_LEVEL_DEBUG, "%s", [message UTF8String]);
         [[NSNotificationCenter defaultCenter]
             postNotificationName:@"success"
