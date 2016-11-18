@@ -5,7 +5,6 @@
 //  Copyright © 2016 seletz. All rights reserved.
 //
 
-#include <asl.h>
 #import "JasonetteDemoAction.h"
 
 @implementation JasonetteDemoAction
@@ -26,22 +25,21 @@
 }
 
 - (void)demo:(NSNotification *)notification {
-    NSDictionary *args = notification.userInfo;
+    NSDictionary *args = notification.object;
     NSDictionary *options = args[@"options"];
     
     if (options[@"text"]) {
         NSString *message = options[@"text"];
-        asl_log(NULL, NULL, ASL_LEVEL_DEBUG, "%s", [message UTF8String]);
+        NSLog(@"JasonetteDemoAction: text: %@", message);
         [[NSNotificationCenter defaultCenter]
-            postNotificationName:@"success"
+            postNotificationName:@"Jason.success"
                           object:@{@"result": @"foo"}];
     } else {
         [[NSNotificationCenter defaultCenter]
-            postNotificationName:@"error"
+            postNotificationName:@"Jason.error"
                           object:@{@"error": @"text option missing."}];
         
     }
 }
-                
 
 @end
