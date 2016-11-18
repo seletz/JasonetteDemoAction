@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JasonetteDemoAction'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of JasonetteDemoAction.'
+  s.version          = '0.1.1'
+  s.summary          = 'A example action plug-in for Jasonette.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/JasonetteDemoAction'
+  s.homepage         = 'https://github.com/seletz/JasonetteDemoAction'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Stefan Eletzhofer' => 'se@nexiles.de' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/JasonetteDemoAction.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/seletz/JasonetteDemoAction.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/seletz'
 
   s.ios.deployment_target = '8.0'
 

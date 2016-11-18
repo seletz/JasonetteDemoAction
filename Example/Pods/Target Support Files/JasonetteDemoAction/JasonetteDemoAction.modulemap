@@ -1,0 +1,6 @@
+framework module JasonetteDemoAction {
+  umbrella header "JasonetteDemoAction-umbrella.h"
+
+  export *
+  module * { export * }
+}

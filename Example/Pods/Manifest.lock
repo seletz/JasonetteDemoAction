@@ -1,0 +1,16 @@
+PODS:
+  - JasonetteDemoAction (0.1.0)
+
+DEPENDENCIES:
+  - JasonetteDemoAction (from `../`)
+
+EXTERNAL SOURCES:
+  JasonetteDemoAction:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JasonetteDemoAction: ac023465b9e5d579830fdf784d9f745b6bd58427
+
+PODFILE CHECKSUM: a63e0518563e13d6169c45f0ecacff7f27ae9e5d
+
+COCOAPODS: 1.2.0.beta.1

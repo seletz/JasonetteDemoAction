@@ -1,0 +1,22 @@
+{
+  "name": "JasonetteDemoAction",
+  "version": "0.1.0",
+  "summary": "A short description of JasonetteDemoAction.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/JasonetteDemoAction",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Stefan Eletzhofer": "se@nexiles.de"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/JasonetteDemoAction.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JasonetteDemoAction/Classes/**/*"
+}
