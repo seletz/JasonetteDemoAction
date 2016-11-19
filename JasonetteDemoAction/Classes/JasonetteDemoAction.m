@@ -22,7 +22,7 @@
 }
 
 - (void)demo:(NSNotification *)notification {
-    NSDictionary *args = notification.object;
+    NSDictionary *args = notification.userInfo;
     NSDictionary *options = args[@"options"];
     
     if (options[@"text"]) {
