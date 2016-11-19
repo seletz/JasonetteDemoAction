@@ -9,9 +9,6 @@
 
 @implementation JasonetteDemoAction
 
-@synthesize VC;
-@synthesize options;
-
 -(id)init {
     if(self = [super init]) {
         [[NSNotificationCenter defaultCenter]
