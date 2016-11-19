@@ -93,7 +93,8 @@ id plugin;
 {
   [[NSNotificationCenter defaultCenter]
      postNotificationName:@"JasonetteDemoAction.demo"
-                   object:@{@"options": @{@"text": @"foo"}}];
+                   object:nil
+                 userInfo:@{@"options": @{@"text": @"foo"}}];
 
   NSLog(@"success: %@", success);
   NSLog(@"error: %@", error);
@@ -106,7 +107,8 @@ id plugin;
 {
   [[NSNotificationCenter defaultCenter]
      postNotificationName:@"JasonetteDemoAction.demo"
-                   object:@{@"options": @{}}];
+                   object:nil
+                 userInfo:@{@"options": @{}}];
 
   NSLog(@"success: %@", success);
   NSLog(@"error: %@", error);
