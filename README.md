@@ -1,24 +1,64 @@
 # JasonetteDemoAction
 
-[![CI Status](http://img.shields.io/travis/Stefan Eletzhofer/JasonetteDemoAction.svg?style=flat)](https://travis-ci.org/Stefan Eletzhofer/JasonetteDemoAction)
+[![CI Status](http://img.shields.io/travis/seletz/JasonetteDemoAction.svg?style=flat)](https://travis-ci.org/seletz/JasonetteDemoAction)
 [![Version](https://img.shields.io/cocoapods/v/JasonetteDemoAction.svg?style=flat)](http://cocoapods.org/pods/JasonetteDemoAction)
 [![License](https://img.shields.io/cocoapods/l/JasonetteDemoAction.svg?style=flat)](http://cocoapods.org/pods/JasonetteDemoAction)
 [![Platform](https://img.shields.io/cocoapods/p/JasonetteDemoAction.svg?style=flat)](http://cocoapods.org/pods/JasonetteDemoAction)
 
-## Example
+## What is it?
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+This is an example plug-in for [Jasonette](http://jasonette.com).  This plug-in implements
+a plug-in which can be invoked using Jason.  The plug-in implements one action `demo` which
+does a `NSLog()` and returns some values to the caller.  It also demos the usage of the 
+`options` passed to the action.
 
-## Requirements
+For details, please see these issues:
 
-## Installation
+- https://github.com/Jasonette/JASONETTE-iOS/issues/26
+- https://github.com/Jasonette/JASONETTE-iOS/issues/34
 
-JasonetteDemoAction is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## Usage
 
-```ruby
-pod "JasonetteDemoAction"
+To use this plug-in in [Jasonette](http://jasonette.com), you need to add this pod and recompile:
+
+```shell
+$ cd Jasonette-iOS
+$ cd app
+$ pod install JasonetteDemoAction
 ```
+
+Once you did that, you can invoke the plug-in using something like this:
+
+```json
+{
+  "$jason": {
+    "head": {
+      "title": "Jasonette Demo Action",
+      "actions": {
+        "$load": {
+          "type": "@JasonetteDemoAction.demo",
+          "options": {
+            "text": "foo"
+          }
+        }
+      }
+    },
+    "body": {
+      "header": {
+        "title": "Jasonette Demo Action"
+      },
+      "sections": {
+        "items": [
+          {
+            "type": "label",
+            "text": "???"
+          }
+        ]
+      }
+    }
+  }
+}
+``` 
 
 ## Author
 
