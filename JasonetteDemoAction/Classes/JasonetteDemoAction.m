@@ -30,11 +30,13 @@
         NSLog(@"JasonetteDemoAction: text: %@", message);
         [[NSNotificationCenter defaultCenter]
             postNotificationName:@"Jason.success"
-                          object:@{@"result": @"foo"}];
+                          object:self
+                        userInfo:@{@"result": @"foo"}];
     } else {
         [[NSNotificationCenter defaultCenter]
             postNotificationName:@"Jason.error"
-                          object:@{@"error": @"text option missing."}];
+                            object:self
+                          userInfo:@{@"error": @"text option missing."}];
         
     }
 }
